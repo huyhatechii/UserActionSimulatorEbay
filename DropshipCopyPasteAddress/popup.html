@@ -1,0 +1,120 @@
+<!Doctype html>
+<html>
+<style>
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+</style>
+
+<body>
+
+<div class="btn-group">
+  <button id="b1">Create T-Shirt Title</button>
+  <button id="b2">List New T-Shirt</button>
+  <button id="b3">Relist T-Shirt To Other Account</button>
+  <button id="b4">Clear Sync Storage</button>
+  <button id="b6">Clear Items Storage</button>
+  <button id="b5">List New Seeds</button>
+  <button id="b7">Run Auto</button>
+  <button id="b8">Test</button>
+  <button id="b9">Pause Tasks</button>
+  <button id="b10">Export T-Shirt Order</button>
+  <button id="b15">Export Aliexpress Products</button>
+  <button id="b12">Fill T-Shirt Tracking Number</button>
+  <button id="b14">Fill Seed Tracking Number</button>
+  <button id="b11">Fill Quantity Error Listings</button>
+  <button id="b13">Starting Auction</button>
+  <button id="b16">Check New Ip Address</button>
+  <button id="b17">Set Enable Run Auto Cookies</button>
+  <button id="b18">Auto Check Dispute Aliexpress</button>
+</div>
+
+
+<form id='myForm' action=''>
+  <font color="red">Draft Listing:</font><br>
+  <input type="text" name="draftListing">
+  <br>
+  <font color="red">Oldest Order Id:</font><br>
+  <input type="text" name="oldestOrderId">
+  <br>
+  <font color="red">Max Bid Count:</font><br>
+  <input type="text" name="maxBidCount">
+  <br>
+  <font color="red">Test Item Id:</font><br>
+  <input type="text" name="testItemId">
+  <br>
+  <font color="red">Aliexpress Excel Product Link:</font><br>
+  <input type="text" name="aliProductExcel">
+  <br>
+  <font color="red">Ebay Account Id:</font><br>
+  <input type="text" name="ebayAccountId">
+  <br>
+  <font color="red">Ebay Account Name:</font><br>
+  <input type="text" name="ebayAccountName">
+  <br>
+  <font color="red">Paypal Email:</font><br>
+  <input type="text" name="paypalEmail">
+  <br>
+  <font color="red">Template Id:</font><br>
+  <input type="text" name="templateId">
+  <br>
+  <font color="red">Lowest Price:</font><br>
+  <input type="text" name="lowestPrice">
+  <br>
+  <font color="red">Max Price:</font><br>
+  <input type="text" name="maxPrice">
+  <br>
+  <font color="red">Total Need To Listing:</font><br>
+  <input type="text" name="totalNeedToListing">
+  <br>
+  <font color="red">Source Ebay Account Relisting Username:</font><br>
+  <input type="text" name="sourceEbayAccount">
+  <br><br>
+  <input type="submit" value="Submit">
+  <br><br>
+  <font color="red">Choose Design Files</font><br>
+  <input type="file" name="filefield" multiple="multiple">
+  <br>
+  <font color="red">Choose Map File</font><br>
+  <input type="file" id="input"/>
+</form> 
+
+<div id="myOutput"></div>
+<script src="popup.js"></script>
+<script type="text/javascript" src="copy_from_ebay.js"></script>
+<script type="text/javascript" src="initialize.js"></script>
+<script type="text/javascript" src="create_title_manual.js"></script>
+<script type="text/javascript" src="listing_t_shirt.js"></script>
+<script type="text/javascript" src="auto.js"></script>
+<script type="text/javascript" src="export_all_order.js"></script>
+<script type="text/javascript" src="export_aliexpress_products.js"></script>
+<script type="text/javascript" src="auto_check_dispute_aliexpress.js"></script>
+</body>
+</html>

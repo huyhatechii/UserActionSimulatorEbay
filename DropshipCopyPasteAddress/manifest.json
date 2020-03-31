@@ -1,0 +1,70 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+	"name": "eBay Dropship Helper",
+	"version": "1.0",
+	"description": "Huy cave",
+	"icons": {
+		"16": "images/16x16.png",
+		"48": "images/48x48.png",
+		"128": "images/128x128.png"
+	},
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	},
+	"options_page": "options.html",
+	"commands": {
+		"auto-fill-aliexpress-order": {
+			"suggested_key": {
+				"default": "Ctrl+A",
+				"mac": "Command+A"
+			},
+			"description": "Autofill note to aliexpress order page"
+		},
+		"copy-from-ebay-order": {
+			"suggested_key": {
+				"default": "Ctrl+Y",
+				"mac": "Command+Y"
+			},
+			"description": "Copy data from eBay order"
+		},
+		"copy-to-aliexpress-order": {
+			"suggested_key": {
+				"default": "Ctrl+I",
+				"mac": "Command+I"
+			},
+			"description": "Paste data to Aliexpress order"
+		}
+	},
+
+	"content_scripts": [{
+		"matches": [ "http://*/*", "https://*/*"],
+		"js": ["js/jquery.js", "js/jquery.csv.min.js", "js/notify.min.js", "copy_from_ebay.js", "initialize.js", "auto_auction.js"],
+		"css": [],
+		"run_at": "document_end"
+	}],
+
+	"permissions": [
+		"clipboardWrite", // for copy and cut
+		"clipboardRead", // for paste
+		"storage",
+		"tabs",
+		"activeTab",
+		"<all_urls>",
+		"unlimitedStorage"
+	],
+
+	"browser_action": {
+		"default_title": "Chon tinh nang!",
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": [
+		"note.mp3",
+		"input.txt"
+	],
+	"externally_connectable": {
+	  "matches": ["*://*.lightinglister.com/*"]
+	}
+}

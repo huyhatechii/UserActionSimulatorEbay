@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="js/jquery.js"></script>
+  <script src="js/notify.min.js"></script>
+  
+  <style>
+	.form-control, .btn {
+		padding: 3px 4px;
+		height: 26px;
+		font-size:12px;
+	}
+	*{font-size:12px;}
+	p {margin: 3px 0;} 
+	
+  </style>
+</head>
+<body>
+	<div class="container">
+		
+		<h1>Options Page</h1>
+		
+		<form class="form-horizontal">
+		  <div class="form-group">
+			<label for="description" class="col-sm-2 control-label">Message Buyer Template</label>
+			<div class="col-sm-10">
+				<textarea class="form-control" rows="10" id="message-buyer-template" placeholder="Greetings {FirstName}
+
+Your item has now been shipped.
+You will be able to track your order at:
+http://global.cainiao.com/
+
+Tracking number: {TrackingNumber}
+(It could take some time before you're able to track your order since it's just been shipped, please be patient and check the website in a few days)
+
+Have a great day!
+
+Best Regards 
+STORENAME"></textarea>
+			</div>
+		  </div>
+		  
+		  <!--<div class="form-group">
+			<label for="pricextime" class="col-sm-2 control-label">Giá gấp N lần</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="pricextime" placeholder="Tự động nhân lên N lần giá trên AliExpress">
+			</div>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="cssclass" class="col-sm-2 control-label">Class css của đoạn cần lấy</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="cssclass" placeholder="Mặc định .product-desc">
+			</div>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="thanshipcost" class="col-sm-2 control-label">Tự động loại bỏ quốc gia</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="thanshipcost" placeholder="Tự động loại bỏ quốc gia ship tới nếu giá ship lớn hơn">
+			</div>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="itemlocation" class="col-sm-2 control-label">Item location</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="itemlocation" placeholder="Mặc định là China, HK">
+			</div>
+		  </div>
+		  -->
+		  <div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+			  <button type="submit" class="btn btn-primary">SAVE CHANGES</button>
+			</div>
+		  </div>
+		</form>
+	</div>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="popup.js"></script>
+</body>
+</html>

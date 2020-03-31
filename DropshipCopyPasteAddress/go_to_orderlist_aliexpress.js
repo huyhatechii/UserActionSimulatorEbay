@@ -1,0 +1,1 @@
+location.replace("https://trade.aliexpress.com/orderList.htm")

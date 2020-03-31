@@ -1,0 +1,4 @@
+document.getElementById('user-shipping-list').innerHTML = '<li><label style="width: 140px;">Company name:</label><span i18entitle="Contact Name" class="i18ncopy"><strong style="display:flex;" data-spm-anchor-id="a2g0s.9042647.0.i3.606a4c4dXkLFl7">BUI TUYET NGA</strong></span></li>'+
+'<li class="long"><label style="width: 140px;">Address:</label><span i18entitle="Address" class="i18ncopy"><strong style="display:flex;">191 Ha Tuy Tap - Hoa Khe</strong></span></li>'+
+'<li class="long"><label style="width: 140px;">&nbsp;</label><span class="i18ncopy"><strong style="display:flex;" data-spm-anchor-id="a2g0s.9042647.0.i3.606a4c4dxdx1AJ">Thanh Khe - Da Nang - 550000</strong></span></li>'+
+'<li class="long"><label style="width: 140px;">&nbsp;</label><span class="i18ncopy"><strong style="display:flex;" data-spm-anchor-id="a2g0s.9042647.0.i3.606a4c4dxdx1AJ">Viet Nam</strong></span></li>';
