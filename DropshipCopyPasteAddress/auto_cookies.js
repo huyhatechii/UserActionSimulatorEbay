@@ -11,6 +11,7 @@ function getNextSellerHubLink() {
 }
 
 function getNextProductLink() {
+    debugger
     var links = document.getElementsByClassName('s-item__link')
     var index = Math.floor(Math.random() * links.length);
     links[index].click()
@@ -43,32 +44,35 @@ getStorageLocal('enableAutoCookies', function(e) {
         console.log('window location' + window.location.href)
         if ('https://www.ebay.com/' === window.location.href) {
             var rand = Math.floor(Math.random() * 30);
-            console.log('Huy' + rand);
+            console.log('search ================================================================');
             if (rand > -1) {
                 changeStateToSearchItems()// search random keyword
             } else {
                 // getNextSellerHubLink()//back to seller hub
             }
         } else if (window.location.href.includes('ebay.com/sch/i.html')) {
+            console.log('click'+'================================================================');
             debugger
-            var rand = Math.floor(Math.random() * 30);
+            // var rand = Math.floor(Math.random() * 30);
+            let rand = 24;
             if (rand > 25) {
-                changeStateToSellerHub()
-                document.getElementById("gh-btn")[0].click()
+                // changeStateToSellerHub()
+                // document.getElementById("gh-btn").click()
             } else {
-                getNextProductLink()
+                getNextProductLink();//view
             }
         }
         else if (window.location.href.includes('ebay.com/itm')) {
             debugger
-            changeStateToSearchItems()
-            debugger
+
+            console.log('add to watch ================================================================');
+            document.getElementById('vi-atl-lnk').click();//add to watch list
 
         } else if (window.location.href.includes('signin')) {
             changeStateToSellerHub();
         } else if (getHostName(window.location.href).includes('ebay.com')) {
             console.log('back');
-            var rand = Math.floor(Math.random() * 60) + 20;
+            let rand = Math.floor(Math.random() * 60) + 20;
             console.log('time = ' + rand + ' seconds');
             setTimeout(function(){
             	window.history.back();
